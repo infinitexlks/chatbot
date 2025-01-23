@@ -50,6 +50,7 @@ users = [
 @app.route('/users', methods=['GET'])
 def get_users():
     return jsonify(users), 200
+```
 
 # GET /users/<id>: Get a user by ID
 ```py
@@ -95,3 +96,4 @@ def delete_user(id):
 # Run the Flask app
 if __name__ == '__main__':
     app.run(debug=True)
+```
