@@ -22,11 +22,11 @@ This is a simple REST API built with Flask in Python that allows you to perform 
    - GET all users: `curl http://127.0.0.1:5000/users`
    - GET a user by ID: `curl http://127.0.0.1:5000/users/1`
    - POST create a new user: 
-     ```
+     ```py
      curl -X POST -H "Content-Type: application/json" -d '{"name": "Alice", "email": "alice@example.com"}' http://127.0.0.1:5000/users
      ```
    - PUT update a user: 
-     ```
+     ```py
      curl -X PUT -H "Content-Type: application/json" -d '{"name": "Updated Name", "email": "updated@example.com"}' http://127.0.0.1:5000/users/1
      ```
    - DELETE a user: `curl -X DELETE http://127.0.0.1:5000/users/1`
@@ -40,11 +40,12 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 # In-memory data
+```py
 users = [
     {"id": 1, "name": "John Doe", "email": "john@example.com"},
     {"id": 2, "name": "Jane Doe", "email": "jane@example.com"}
 ]
-
+```
 # GET /users: Get all users
 ```py
 @app.route('/users', methods=['GET'])
