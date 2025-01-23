@@ -51,6 +51,7 @@ def get_users():
     return jsonify(users), 200
 
 # GET /users/<id>: Get a user by ID
+```py
 @app.route('/users/<int:id>', methods=['GET'])
 def get_user(id):
     user = next((user for user in users if user["id"] == id), None)
