@@ -46,6 +46,7 @@ users = [
 ]
 
 # GET /users: Get all users
+```py
 @app.route('/users', methods=['GET'])
 def get_users():
     return jsonify(users), 200
