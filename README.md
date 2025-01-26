@@ -1,5 +1,3 @@
-"""
-Flask REST API Example
 
 This is a simple REST API built with Flask in Python that allows you to perform CRUD operations (Create, Read, Update, Delete) on a list of users.
 
